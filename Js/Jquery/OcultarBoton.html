@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function Mostrar(){
+            // var input1 = document.getElementsByName("input")[0];
+            // var input2 = document.getElementsByName("input")[1];
+            var input1 = document.getElementById("input1");
+            var input2 = document.getElementById("input2");
+            if(input1.style.display == "none"){
+                input1.style.display = "block";
+                input2.style.display = "block";
+                document.getElementById("btn").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="input" id="input1" style="display:none;" value="12">
+    <input type="text" name="input" id="input2" style="display:none;" value="120">
+    <!-- <input type="button" name="" id=""> -->
+    <button id="btn" onclick="Mostrar()">Añadir</button>
+</body>
+</html>

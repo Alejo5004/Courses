@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <select id="Departamento">
+        <option value="">Seleccione</option>
+        <option value="1">Hola</option>
+        <option value="2">Hola1</option>
+        <option value="3">Hola2</option>
+    </select>
+    <select id="Muinicipio" disabled="true">
+        <option value="">Seleccione</option>
+        <option value="1">Hola</option>
+        <option value="2">Hola1</option>
+        <option value="3">Hola2</option>
+    </select>
+    <input type="text" name="" id="Prueba">
+    <script>
+        // $(document).ready(function(){
+        //     $("select#Departamento").change(function(){
+        //         $("Prueba").val(&!"#Departamento")
+        //     });
+        // });
+    </script>
+    <div id="dos">
+
+    </div>
+    <script>
+        $( "select#Departamento").change(function () {
+        var str = "";
+        // $( "select option:selected" ).val(function() {
+            str += $( this ).val() + " ";
+        // });
+        $( "div#dos" ).text( str );
+        }).change();
+        if( "select#Departamento" != null){
+            document.getElementById("#Muinicipio").disabled = "false";
+        }
+    </script>
+</body>
+</html>

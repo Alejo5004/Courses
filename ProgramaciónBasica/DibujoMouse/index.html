@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo con el mouse</title>
+    <style>
+        #canvas{
+            border:2px solid gray;
+        }
+        .btn{
+            border: none;
+            padding: 15px 10px 5px 10px;
+            cursor: pointer;
+            margin: 0px 5px;
+        }
+        .btn-red{
+            background: red;
+        }
+        .btn-green{
+            background: green;
+        }
+        .btn-blue{
+            background: blue;
+        }
+        .btn-yellow{
+            background: yellow;
+        }
+        .stroke{
+            border: none;
+            cursor: pointer;
+            margin: 0px 5px;
+            background-color: black;
+        }
+        .stroke-small{
+            padding: 1px 10px 1px 10px;
+        }
+        .stroke-normal{
+            padding: 3px 10px 3px 10px;
+        }
+        .stroke-large{
+            padding: 5px 10px 5px 10px;
+        }
+        .clear{
+            margin: 0px 20px 0px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Dibujo con el mouse </h1>
+
+    <canvas width="600" height="600" id="canvas"></canvas>
+    <br>
+
+    <span>Colores:</span>
+    <button class="btn btn-red" onclick="cambioColor('red')"></button>
+    <button class="btn btn-green" onclick="cambioColor('green')"></button>
+    <button class="btn btn-blue" onclick="cambioColor('blue')"></button>
+    <button class="btn btn-yellow" onclick="cambioColor('yellow')"></button>
+
+    <button class="clear" id="clear" title="Limpia todo el canvas">Limpiar</button>
+    <button class="clear" id="eraser" title="Limpia la zona por donde pasa el mouse">Borrar</button>
+
+    <span>Tamaño del trazo:</span>
+    <button class="stroke stroke-small" onclick="sizeStroke(1)"></button>
+    <button class="stroke stroke-normal" onclick="sizeStroke(3)"></button>
+    <button class="stroke stroke-large" onclick="sizeStroke(5)"></button>
+
+    <script src="drew.js"></script>
+</body>
+</html>

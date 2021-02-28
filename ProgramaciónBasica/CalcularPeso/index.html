@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Conozca su peso en Jupiter</h1>
+    <script>
+        var peso;
+        var gravedad_tierra;
+        var gravedad_jupiter;
+        var total;
+        var planeta_nombre;
+
+        usuario = prompt('Ingrese su peso para saber su peso en jupiter');
+        planeta = parseInt(prompt('Ingrese el planeta 1 jupiter 2 marte'));
+        // Conviete el texto y números flotantes en números enteros
+        // peso = parseInt(usuario);
+
+        // Conviete el texto en números flotantes
+        peso = parseFloat(usuario);
+        gravedad_tierra = 9.8;
+
+        switch(planeta){
+            case 1:
+                gravedad_planeta    = 24.7;
+                planeta_nombre      = "Jupiter";
+                break;
+            case 2:
+                gravedad_planeta    = 3.7;
+                planeta_nombre      = "Marte";
+                break;
+            default:
+                gravedad_planeta    = 1;
+                peso                = 1000000000;
+                planeta_nombre      = "Infinito";
+        }
+
+        total = peso *  gravedad_planeta / gravedad_tierra;
+
+        document.write("Tu peso en " + planeta_nombre + " es: <strong>" + total.toFixed(2) + " Kilos </strong>");
+    </script>
+</body>
+</html>

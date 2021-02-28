@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="col">
+        <input type="text" name="Sede1" id="Sede1">
+    </div>
+    <!-- <div class="col">
+        <input type="text" name="Sede" id="Sedes" value="Sede" disabled = "true">
+    </div>
+    <div>
+        <input type="text" name="Sede2" id="Sede2" value="Sede2">
+    </div>
+    <div>
+        <input type="text" name="Sede3" id="Sede3" value="Sede3">
+    </div> -->
+
+    <!-- <div id="sol"> -->
+    <div id="Sede">
+        <p>Algo</p>
+    </div>
+    <button id="more" onclick="More()">mas Sedes</button>
+
+    <script>
+        // function More(){
+        // //    var add = document.getElementById("sol");
+        // //     document.insertAdjacentHTML('<input type="text" name="Sede" id="Sede" value="Sede">');
+        // if(document.getElementById("Sede1").value != null){
+        //     document.getElementById("Sede").disabled == "false";
+        // }
+        // }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+      <script>
+          $(document).ready(function(){
+              $("input#Sede1").on("keyup", function(){
+                  var valor = $(this).val();
+                  $("div#Sede p").html(valor);
+              });
+          });
+      </script>
+</body>
+</html>

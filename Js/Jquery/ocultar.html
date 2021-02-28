@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function Mostrar(){
+        // cambia la opacidad de un elemento ↓
+        // document.getElementById("caja").style.opacity = "1";
+        document.getElementById("caja").style.display = "block";
+        }
+        function Ocultar(){
+        // cambia la opacidad de un elemento ↓
+        // document.getElementById("caja").style.opacity = "0";
+        document.getElementById("caja").style.display = "none";
+        // document.getElementById("Ocultar").style.opacity = "0";
+        // document.getElementById("Mostrar").style.opacity = "0";
+        }
+        function Mostrar_Ocultar(){
+            var $caja = document.getElementById("caja");
+
+            if($caja.style.display == "none" ){
+                Mostrar();
+                document.getElementById("Mostrar_Ocultar").value = "Ocultar";
+            }else{
+                Ocultar();
+                document.getElementById("Mostrar_Ocultar").value = "Mostar";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="Mostrar_Ocultar" onclick="Mostrar_Ocultar()" value="Ocultar">
+    <h1 id="caja">Mostrar y ocultar</h1>
+    <!-- <input type="button" id="Mostrar" onclick="Mostrar()" value="Mostrar">
+    <input type="button" id="Ocultar" onclick="Ocultar()" value="Ocultar"> -->
+</body>
+</html>

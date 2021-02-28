@@ -1,0 +1,167 @@
+about:black => Nueva ventana de chrome vacia
+
+
+
+HTML        => Información (Marcado de Hipertexto); extension => html
+CSS         => Diseño   (Estilo en cascadas); extension => css
+JavaScript  => Interactividad; extension => js
+
+El unico que interpreta es el navegador y exclusivamente el archivo html(el css y js se pueden llamar atraves de codigo)
+
+HTML
+    Etiquetas que realizan cosas especiales
+
+    <head></head>       => contiene los metadatos
+    <meta charset="utf-8" />  => Coloca los caracteres esoeciales de los idiomas
+    <body></body>       => Contiene todo los elementos visibles de la web
+    <style></style>     => Contiene los estilos de css
+    <script></script>   => Contiene el js y se debe colocar al final de body
+    <canvas></canvas>   => Permite dibujar en js
+
+    Example:
+        <strong>Hola</strong> => coloca El texto en bold
+
+    Atributos: ()
+        id      => Para identificar con exactitud una unica etiqueta 
+        class   => Identifica varias etiquetas
+        src     => Busca una ruta de archivo
+
+        Example:
+            <div class="ejemplo" id="ejm"></div>
+            <img src="image1.png" />
+
+CSS
+    body{
+        font-family: Helvetica;
+    }
+    
+    body{}      => Coloca a todas las etiquetas de ese tipo los estilos
+    #id{}       => Busca la etiqueta que tenga el id especificado para añadirle los estilos
+    .class{}    => Se busca las etiquetas que tengan la clase para añadirles exclusivamente los estilos
+
+    {}  => Son bloques de código
+    ;   => Como finaliza cada propieded
+
+Js
+    var nombre    = 2     => Asignacion de variables 
+    const NOMBRE  = 2     => Son variables que nio cambian a lo largo del codigo
+    let nombre     = 2     => Son variables que solo se ejecutan en un bloque de Código
+
+    Reglas de la variable:
+        1. La variable siempre debe empezar con: letra, _(guion bajo), $
+        2. No se deben colocar letras como la ñ
+        3. Es sencible a Mayúsculas y minusculas (No es lo mismo a y A)
+
+    ""  => Define un string
+    ;   => Cierra la instrucción
+    {}  => Son bloques de código
+    \n  => Salto de linea en un string
+    "El valor es: " + variable => + Funciona como concatenación la union de varibles y strings
+
+    Example:
+
+        var nombre = prompt('Digita tu nombre');
+
+        alert('Tu nombre es ' + nombre);
+    
+
+    Instrución o orden:
+        alert()         => Aparece una alerta en js
+        prompt()        => un alerta con campo de texto
+
+        .write => Variable del objeto document
+        document.write()=> Permite escribir en el body
+        parseInt()      => Conviete un string o número flotante en un entero
+        parseFloat()    => Conviete un string en un numero flotante
+        window.location => Obtiene la url
+        console.log()   => Ayuda a depurar codigo que va a aparecer en la consola
+
+    Condicionales
+        if(){
+
+        }elseif(){
+
+        }else{
+
+        }
+
+        switch([varible]){
+            case [resultado esperado de la variable]:
+                //Código
+                break;      => Rompe la condicional para que no se ejecute la siguiente condicional
+                continue;   => Para ejecutar si se puede mas de la condicional
+            default:
+                [Si no conside el resultado esperado]
+        }
+
+        Signos condicionales
+            !=  => No es Igual
+            <>  => Diferencia
+            =   => Asignación
+            ==  => Comparación
+            === => Exactitud de tipo y contenido
+                Example:
+                    var años = "18" =>Es un string
+                    var numero = 18 => Es un entero
+
+                    if(años == numero){}    => true porque js puede interpretar si un estring es un numero automaticamente
+                    if(años === numero){}   => false porque aunque ambos son numeros uno es un string y el otro es un entero
+            <   => menor que
+            >   => Mayor que
+            <=  => Menor o igual
+            >=  => Mayor o igual
+    
+    Ciclos => Repeticion continua del codigo
+        Ejecuta repetidadmente el codigo que este dentro del bloque
+            for(i = 0; i <= 10; i ++){
+
+            }
+            
+            l = 0
+            while(l <= 10){
+                //código
+                l ++;
+            }
+
+        Se ejecuta almenos UNA VEZ el ciclo sin importar si la condicional se cumple
+            do{
+                //Código
+                l ++;
+            }while( l <);
+
+    Objetos del Navegador
+        Navigator   => Controla el pc (Almacena datos en el navegador, accede al GPS)
+        Windows     => Controla las Pestañas del navedador
+        document (DOM) => controla el contenido html
+
+        Cada Objeto tiene variables(atributo, o propiedad) de su entorno
+
+        NOTA:
+            Los metodos son funciones dentro de Objetos
+
+    Funciones: Permite Reutilizar codigo si se repite muchas veces
+        
+        NOTA: Las funciones son las primeras que se cargan
+
+        Tipo de Funciones:
+            Anonimas:   Se ejecutan siempre cuando carga el script
+                Example:
+                    function(){
+                        //codigo reutilizable
+                    }
+
+            Ejecutables:Se Ejecutan cuando son llamadas
+                Example:
+                    nuevaFuncion();
+                    function nuevaFuncion(){
+
+                    }
+    
+    Eventos: Funciones que se disparancunado una acción ocurre
+
+        btn = document.getElementById('button');
+
+        btn.addEventListener('click', nuevaFuncion);
+                          Evento
+        
+        NOTA: No se colocan parentecis al llamar una funcion con el evento sino solo se nombra para que js sepa como se llama y cuando ejecutarla

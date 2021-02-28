@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo con Flechas</title>
+    <style>
+        #square{
+            border:2px solid black;
+        }
+        .btn{
+            border: none;
+            padding: 15px 10px 5px 10px;
+            cursor: pointer;
+            margin: 0px 5px;
+        }
+        .btn-red{
+            background: red;
+        }
+        .btn-green{
+            background: green;
+        }
+        .btn-blue{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dibuja Oprimiendo las flechas</h1>
+    <canvas width="300" height="300" id="square"></canvas>
+    <p>
+        WOOOOOOOOOOOOOOW !!
+    </p>
+    <button id="clear">Limpiar</button>
+    <button class="btn btn-red" onclick="cambioColor('red')"></button>
+    <button class="btn btn-green" onclick="cambioColor('green')"></button>
+    <button class="btn btn-blue" onclick="cambioColor('blue')"></button>
+    <script src="drew.js"></script>
+</body>
+</html>
